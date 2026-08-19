@@ -14,7 +14,7 @@ func Ancestors(path string) []string {
 func DescendantPaths(paths []string, root string) []string {
 	result := make([]string, 0)
 	for _, path := range paths {
-		if IsSameOrDescendant(path, root) {
+		if IsAncestor(root, path) {
 			result = append(result, path)
 		}
 	}
